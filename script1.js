@@ -20,7 +20,7 @@ if(dash.innerText.indexOf("Available Units") !== -1 && dash.classList.contains('
     }
     apts.push(apt);
   }
-  console.log(apts)
+  createUnitsUi(apts)
 }
 
 
@@ -84,6 +84,14 @@ if (emailBox) {
   emailBox.setSelectionRange(0, 99999); /* For mobile devices */
   /* Copy the text inside the text field */
   navigator.clipboard.writeText(emailBox.value);
+}
+
+function createUnitsUi(unitsArray){
+  const $wrapper = document.createElement('div');
+  $wrapper.classList.add('custom-wrapper');
+  unitsArray.forEach((unit)=>{
+    console.log(unit)
+  })
 }
 
 function clickAttachments() {
