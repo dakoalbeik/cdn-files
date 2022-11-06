@@ -87,6 +87,7 @@ if (emailBox) {
 }
 
 function createUnitsUi(unitsArray){
+  console.log("Create units UI");
   const $wrapper = document.createElement('div');
   $wrapper.classList.add('custom-wrapper');
   unitsArray.forEach((unit)=>{
