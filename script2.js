@@ -1,5 +1,15 @@
 console.log("***SCRIPT RAN***")
 
+document.head.innerHTML += `
+  <style>
+    .custom-wrapper {
+      width: 100px;
+      height: 100px;
+      background: yellow;
+    }
+  </style>
+`
+
 setInterval(() => {
   location.reload();
 }, 1000 * 60 * 20)
@@ -90,6 +100,7 @@ function createUnitsUi(unitsArray){
   console.log("Create units UI");
   const $wrapper = document.createElement('div');
   $wrapper.classList.add('custom-wrapper');
+  document.body.appendChild($wrapper);
   unitsArray.forEach((unit)=>{
     console.log(unit)
   })
