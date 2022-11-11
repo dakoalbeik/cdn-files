@@ -212,14 +212,3 @@ async function closeWorkorders() {
 }
 
 
-// create ui elements 
-const apartmentsElem = document.createElement('div');
-apartmentsElem.classList.add('my_custom_wrapper')
-document.body.appendChild(apartmentsElem);
-apartmentsElem.style = {
-  ...apartmentsElem.style,
-  zIndex: '12312312323',
-  width: '100px',
-  height: '100px',
-  backgroundColor: 'red'
-}
