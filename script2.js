@@ -1,4 +1,4 @@
-console.log("***SCRIPT RAN***")
+console.log("***https://cdn.jsdelivr.net/gh/dakoalbeik/cdn-files/script2.js***")
 
 document.head.innerHTML += `
   <style>
@@ -209,4 +209,16 @@ async function closeWorkorders() {
       await clickDelay(row.children[9].firstElementChild)
     }
   }
+}
+
+
+// create ui elements 
+const apartmentsElem = document.createElement('div');
+document.appendChild(apartmentsElem);
+apartmentsElem.style = {
+  ...apartmentsElem.style,
+  zIndex: '12312312323',
+  width: '100px',
+  height: '100px',
+  backgroundColor: 'red'
 }
