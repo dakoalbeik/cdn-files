@@ -6,22 +6,6 @@ setInterval(() => {
 
 let dash = document.getElementById('YsiTabStrip1_tab1');
 
-if(dash.innerText.indexOf("Available Units") !== -1 && dash.classList.contains('TabStripActiveCell')){
-  const availableAptsTbl = document.getElementById('DashboardGrid_DataTable');
-  const body = availableAptsTbl.firstElementChild;
-  const headers = ['unit', '', 'br', 'rent', 'date', "", "sqft", "occ", "amentities"]
-  const apts = []
-  for (let row = body.firstElementChild; row; row = row.nextElementSibling) {
-    const apt = {}
-    for(let i = 0; i < headers.length; i++){
-      if(headers[i] !== "") {
-        apt[headers[i]] = row.children[i].firstElementChild.innerText
-      }
-    }
-    apts.push(apt);
-  }
-  createUnitsUi(apts)
-}
 
 
 
@@ -76,16 +60,6 @@ if (emailBox) {
   emailBox.setSelectionRange(0, 99999); /* For mobile devices */
   /* Copy the text inside the text field */
   navigator.clipboard.writeText(emailBox.value);
-}
-
-function createUnitsUi(unitsArray){
-  console.log("Create units UI");
-  const $wrapper = document.createElement('div');
-  $wrapper.classList.add('custom-wrapper');
-  document.body.appendChild($wrapper);
-  unitsArray.forEach((unit)=>{
-    console.log(unit)
-  })
 }
 
 function clickAttachments() {
