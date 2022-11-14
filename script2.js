@@ -1,15 +1,5 @@
 console.log("***https://cdn.jsdelivr.net/gh/dakoalbeik/cdn-files/script2.js***")
 
-document.head.innerHTML += `
-  <style>
-    .custom-wrapper {
-      width: 100px;
-      height: 100px;
-      background: yellow;
-    }
-  </style>
-`
-
 setInterval(() => {
   location.reload();
 }, 1000 * 60 * 20)
@@ -34,15 +24,7 @@ if(dash.innerText.indexOf("Available Units") !== -1 && dash.classList.contains('
 }
 
 
-document.addEventListener("keydown", ({key}) => {
-  // to fetch available apts
-  if (key !== "+") return;
-  const link = document.createElement('a')
-  document.body.appendChild(link)
-  link.href = "JavaScript:__doPostBack('AvailableUnitsDash','')"
-  link.click()
 
-})
 
 document.getElementById('cmdLogin')?.click();
 
